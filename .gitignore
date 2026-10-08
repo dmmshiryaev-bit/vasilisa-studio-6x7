@@ -1,0 +1,15 @@
+.deploy/
+.vercel/
+.env
+.env.*
+node_modules/
+*.jpg
+*.jpeg
+*.zip
+img/friends.png
+img/vasilisa-avatar.png
+img/preview*.png
+img/*.txt
+.DS_Store
+Thumbs.db
+*.log

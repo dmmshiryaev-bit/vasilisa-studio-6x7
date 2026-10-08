@@ -1,0 +1,14 @@
+.git
+.github
+.deploy
+.env*
+*.jpg
+*.jpeg
+*.zip
+*.md
+smoke-test.cjs
+img/friends.png
+img/vasilisa-avatar.png
+img/preview*.png
+img/*.txt
+img/screenshots

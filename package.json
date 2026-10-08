@@ -1,0 +1,8 @@
+{
+  "name": "vasilisa-studio-6x7",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Браузерная игра на семь дней для изучения таблицы умножения и деления в 3–4 классе.",
+  "scripts": { "test": "node --check game.js && node smoke-test.cjs" },
+  "engines": { "node": ">=20" }
+}
