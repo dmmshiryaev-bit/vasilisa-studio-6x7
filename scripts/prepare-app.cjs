@@ -1,0 +1,14 @@
+const fs=require('node:fs');
+const path=require('node:path');
+const base=path.resolve(__dirname,'..');
+const out=path.join(base,'build/web');
+fs.mkdirSync(path.join(out,'img'),{recursive:true});
+const files=['index.html','style.css','game.js','app.js','audio-storage.js','img/friends-v2.png','img/vasilisa-toy-avatar.png','img/icon-512.png'];
+for(const file of files)fs.copyFileSync(path.join(base,file),path.join(out,file));
+let html=fs.readFileSync(path.join(out,'index.html'),'utf8');
+html=html.replace(/<a id="installLink"[\s\S]*?<\/a>/,'').replace(/<link rel="manifest"[^>]*>/,'').replace(/<script src="app.js"><\/script>/,'');
+fs.writeFileSync(path.join(out,'index.html'),html);
+let css=fs.readFileSync(path.join(out,'style.css'),'utf8');
+css=css.replace(/@import url\([^;]+;/,'');
+fs.writeFileSync(path.join(out,'style.css'),css);
+console.log('Prepared offline application: only game files and used images.');

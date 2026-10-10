@@ -1,6 +1,15 @@
 .git
 .github
 .deploy
+build
+dist
+android
+desktop
+scripts
+installers
+node_modules
+package-lock.json
+capacitor.config.json
 .env*
 *.jpg
 *.jpeg
@@ -12,3 +21,4 @@ img/vasilisa-avatar.png
 img/preview*.png
 img/*.txt
 img/screenshots
+img/app-icon.ico

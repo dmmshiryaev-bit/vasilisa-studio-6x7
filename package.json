@@ -1,8 +1,55 @@
 {
   "name": "vasilisa-studio-6x7",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Браузерная игра на семь дней для изучения таблицы умножения и деления в 3–4 классе.",
-  "scripts": { "test": "node --check game.js && node smoke-test.cjs" },
-  "engines": { "node": ">=20" }
+  "scripts": {
+    "test": "node --check game.js && node smoke-test.cjs",
+    "prepare:app": "node scripts/prepare-app.cjs",
+    "build:windows": "npm run prepare:app && electron-builder --win nsis --x64 --publish never"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@capacitor/android": "8.5.3",
+    "@capacitor/cli": "8.5.3",
+    "@capacitor/core": "8.5.3",
+    "electron": "44.7.0",
+    "electron-builder": "26.15.3"
+  },
+  "main": "desktop/main.cjs",
+  "author": "Dmitryi Shiryaev",
+  "build": {
+    "appId": "io.github.dmmshiryaev.vasilisa",
+    "productName": "Василиса в кадре",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "desktop/main.cjs",
+      "build/web/**/*",
+      "img/icon-512.png",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "img/app-icon.ico",
+      "artifactName": "Vasilisa-Setup-${version}.exe",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Василиса в кадре",
+      "runAfterFinish": false,
+      "installerLanguages": [
+        "ru_RU",
+        "en_US"
+      ]
+    }
+  }
 }

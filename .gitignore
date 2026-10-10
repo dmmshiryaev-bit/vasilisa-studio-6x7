@@ -3,6 +3,12 @@
 .env
 .env.*
 node_modules/
+build/
+dist/
+android/
+installers/
+*.keystore
+*.jks
 *.jpg
 *.jpeg
 *.zip

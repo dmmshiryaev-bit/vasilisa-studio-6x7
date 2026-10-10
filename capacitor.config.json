@@ -1,0 +1,6 @@
+{
+  "appId": "io.github.dmmshiryaev.vasilisa",
+  "appName": "Василиса 6×7",
+  "webDir": "build/web",
+  "android": { "backgroundColor": "#10112c" }
+}
