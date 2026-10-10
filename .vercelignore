@@ -17,6 +17,7 @@ capacitor.config.json
 *.md
 smoke-test.cjs
 offline-test.cjs
+installer-test.cjs
 img/friends.png
 img/vasilisa-avatar.png
 img/preview*.png

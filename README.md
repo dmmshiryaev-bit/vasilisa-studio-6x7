@@ -4,7 +4,7 @@
 
 **[Играть онлайн](https://vasilisa-studio-6x7.vercel.app/)** · [Сценарий недели](Сценарий-недели.md) · [Публикация](DEPLOY.md)
 
-**[Установить на устройство](https://vasilisa-studio-6x7.vercel.app/install.html)** · [Инструкция установки](INSTALL.md) · [Установочные файлы Windows и Android](https://github.com/dmmshiryaev-bit/vasilisa-studio-6x7/releases/tag/v0.2.0)
+**[Установить на устройство](https://vasilisa-studio-6x7.vercel.app/install.html)** · [Инструкция установки](INSTALL.md) · [Установочные файлы Windows и Android](https://yadi.sk/d/4Sm2JcVG9pg8nw)
 
 ![Сказочная команда Василисы](img/friends-v2.png)
 

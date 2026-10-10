@@ -7,6 +7,6 @@ vm.createContext(sandbox);vm.runInContext(fs.readFileSync('sw.js','utf8'),sandbo
  for(const file of ['index.html','game.js','style.css','audio-storage.js','install.html','img/friends-v2.png','img/vasilisa-toy-avatar.png']){let response;handlers.fetch({request:{url:origin+'/'+file,method:'GET'},respondWith:promise=>response=promise});assert.ok((await response).ok,'Not cached '+file)}
  assert.equal(network,0,'Cached game must not need network');
  let intercepted=false;handlers.fetch({request:{url:'https://open.spotify.com/embed/song',method:'GET'},respondWith:()=>intercepted=true});assert.equal(intercepted,false);
- const html=fs.readFileSync('install.html','utf8');assert.ok(html.includes('Vasilisa-Setup-0.2.0.exe'));assert.ok(html.includes('Vasilisa-Android-0.2.0.apk'));
+ const html=fs.readFileSync('install.html','utf8');assert.ok(html.includes('/api/installer?device=windows'));assert.ok(html.includes('/api/installer?device=android'));
  console.log('PASS: all offline assets exist; cached game works with failed network; third-party player is not cached; installer links match release filenames.');
 })().catch(error=>{console.error(error);process.exitCode=1});

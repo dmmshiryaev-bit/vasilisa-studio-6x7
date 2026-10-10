@@ -1,6 +1,7 @@
 'use strict';
 let installPrompt;
 const installButton = document.getElementById('installPwa');
+if('serviceWorker' in navigator){let previousController=!!navigator.serviceWorker.controller;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(previousController)location.reload();previousController=true});}
 window.addEventListener('beforeinstallprompt', event => {
   event.preventDefault(); installPrompt = event; installButton.hidden = false;
 });

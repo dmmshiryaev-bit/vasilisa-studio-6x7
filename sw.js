@@ -1,5 +1,5 @@
 'use strict';
-const CACHE = 'vasilisa-offline-v020';
+const CACHE = 'vasilisa-offline-v020-cloud';
 const FILES = ['./','./index.html','./style.css','./game.js','./app.js','./audio-storage.js','./install.html','./install.js','./install.css','./manifest.webmanifest','./img/friends-v2.png','./img/vasilisa-toy-avatar.png','./img/icon-192.png','./img/icon-512.png','./img/apple-touch-icon.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES)).then(() => self.skipWaiting()));

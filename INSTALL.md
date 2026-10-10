@@ -1,6 +1,6 @@
 # Установка игры
 
-[Выбрать устройство](https://vasilisa-studio-6x7.vercel.app/install.html) · [Установочные файлы](https://github.com/dmmshiryaev-bit/vasilisa-studio-6x7/releases/tag/v0.2.0)
+[Выбрать устройство](https://vasilisa-studio-6x7.vercel.app/install.html) · [Установочные файлы](https://yadi.sk/d/4Sm2JcVG9pg8nw)
 
 ## Windows
 
@@ -34,4 +34,4 @@ Node.js 22+, `npm ci`, затем:
 - Android: `npm run prepare:app`, `npx cap add android`, `node scripts/prepare-android.cjs`, `npx cap sync android`, затем `android/gradlew assembleDebug`. Нужны JDK 21 и Android SDK.
 - GitHub Actions: workflow `Build installers` собирает оба файла на отдельных Windows/Ubuntu машинах. Исходные фотографии и локальные файлы доступа в сборку не входят.
 
-Установочные файлы не добавляются в историю Git; они публикуются отдельно в GitHub Releases.
+Установочные файлы не добавляются в историю Git; они хранятся отдельно на Яндекс Диске в папке «игры для детей».
